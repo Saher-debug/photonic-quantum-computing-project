@@ -1,51 +1,143 @@
-# Quantum Circuit Simulation Outputs
+# From Quantum Entanglement to Photonic Teleportation
 
-Figures and terminal text grouped by script.
+## A Comparative Study Using Qiskit and Perceval
 
-Figures are stored in `quantam-circuit-simulation-figures/`.
+### Author
 
-## Perceval CNOT Gate.py
+**Saher Zayed**  
+M.Sc. Computer and Systems Engineering  
+Alexandria University
 
-### Terminal Output
+---
+
+## Overview
+
+Quantum computing can be approached from two complementary perspectives:
+
+- **Gate-Based Quantum Computing**, where information is manipulated using logical quantum gates.
+- **Photonic Quantum Computing**, where photons, beam splitters, phase shifters, and detectors physically implement quantum information processing.
+
+This project explores both paradigms through a sequence of experiments that progressively build from fundamental quantum concepts to advanced photonic communication protocols.
+
+The implementation combines:
+
+- Qiskit
+- Perceval
+- NumPy
+- Matplotlib
+
+---
+
+## Project Flow
 
 ```text
-<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x00000254D833FE90>
-<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x00000254D837F650>
+Bell State Generation
+        ->
+Quantum Teleportation
+        ->
+Hong-Ou-Mandel Interference
+        ->
+Photonic CNOT Gate
+        ->
+Boson Sampling
+        ->
+Large Photonic Interferometer
+        ->
+Photonic Quantum Teleportation
 ```
 
-### Figures
+Each experiment introduces a new quantum concept while building toward scalable photonic quantum computing architectures.
 
-![Figure 1. CNOT Photonic Processor](quantam-circuit-simulation-figures/perceval_cnot_gate/cnot_photonic_processor.png)
+---
 
-*Figure 1. CNOT Photonic Processor*
+## Experiment 1 - Bell State Generation
 
-![Figure 2. Displayed Figure 01](quantam-circuit-simulation-figures/perceval_cnot_gate/displayed_figure_01.png)
+### Objective
 
-*Figure 2. Displayed Figure 01*
+Generate a Bell state and demonstrate quantum entanglement.
 
-![Figure 3. Displayed Figure 02](quantam-circuit-simulation-figures/perceval_cnot_gate/displayed_figure_02.png)
+The Bell state implemented is:
 
-*Figure 3. Displayed Figure 02*
+```text
+|Phi+> = (|00> + |11>) / sqrt(2)
+```
 
-![Figure 4. Displayed Figure 03](quantam-circuit-simulation-figures/perceval_cnot_gate/displayed_figure_03.png)
+This state represents one of the most fundamental entangled states in quantum information theory.
 
-*Figure 4. Displayed Figure 03*
+### Concepts Demonstrated
 
-![Figure 5. Displayed Figure 04](quantam-circuit-simulation-figures/perceval_cnot_gate/displayed_figure_04.png)
+- Superposition
+- Entanglement
+- Quantum correlations
 
-*Figure 5. Displayed Figure 04*
+### Result
 
-![Figure 6. HOM Optical Circuit](quantam-circuit-simulation-figures/perceval_cnot_gate/hom_optical_circuit.png)
+The experiment successfully generated an entangled Bell pair, providing the foundation required for quantum communication protocols and teleportation.
 
-*Figure 6. HOM Optical Circuit*
+![Qiskit Bell State Measurement Histogram](quantam-circuit-simulation-figures/qiskit_bell_state/displayed_figure_01.png)
 
-## Perceval HOM Effect.py
+*Figure 1. Qiskit Bell State Measurement Histogram*
+
+![Qiskit Bell State Saved Result](quantam-circuit-simulation-figures/qiskit_bell_state/qiskit_bell_state_results.png)
+
+*Figure 2. Qiskit Bell State Saved Result*
+
+---
+
+## Experiment 2 - Quantum Teleportation (Qiskit)
+
+### Objective
+
+Demonstrate the transmission of an unknown quantum state using:
+
+- Entanglement
+- Classical communication
+- Quantum corrections
+
+Quantum teleportation does not transport matter. Instead, it transfers quantum information from one qubit to another.
+
+### Protocol
+
+1. Generate an entangled Bell pair.
+2. Entangle the unknown state with Alice's qubit.
+3. Perform Bell-basis measurements.
+4. Send two classical bits to Bob.
+5. Apply correction operations.
+6. Reconstruct the original state.
+
+### Measurement Results
+
+The teleportation experiment produced approximately uniform measurement counts across the expected output states. The near-uniform distribution confirms the correct operation of the teleportation circuit and the successful reconstruction of the teleported quantum information.
+
+![Qiskit Quantum Teleportation Measurement Histogram](quantam-circuit-simulation-figures/qiskit_quantum_teleportation/displayed_figure_01.png)
+
+*Figure 3. Qiskit Quantum Teleportation Measurement Histogram*
+
+![Qiskit Quantum Teleportation Saved Result](quantam-circuit-simulation-figures/qiskit_quantum_teleportation/quantum_teleportation_results.png)
+
+*Figure 4. Qiskit Quantum Teleportation Saved Result*
+
+---
+
+## Experiment 3 - Hong-Ou-Mandel (HOM) Interference
+
+### Objective
+
+Demonstrate quantum interference using identical photons.
+
+Two photons are injected into a 50/50 beam splitter simultaneously.
+
+### Observation
+
+Classically, one would expect the photons to randomly separate.
+
+Quantum mechanically, the photons interfere and always exit together. This phenomenon is known as the **Hong-Ou-Mandel Effect**.
 
 ### Terminal Output
 
 ```text
 Perceval Photonic Circuit:
-<perceval.components.linear_circuit.Circuit object at 0x0000028AFFF60F50>
+<perceval.components.linear_circuit.Circuit object>
 
 Input State:
 |1,1>
@@ -55,218 +147,234 @@ Output Probability Distribution:
 |0,2>: 0.5000
 ```
 
-*No figure files were generated for this script.*
+### Importance
 
-## Perceval Large Interferometer.py
+The HOM effect is one of the most important interference phenomena in photonic quantum computing and serves as the basis for many optical quantum gates.
 
-### Terminal Output
+---
 
-```text
-Large 8-mode Photonic Interferometer:
-<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x000002E7C87B3310>
+## Experiment 4 - Photonic CNOT Gate
 
-Input State:
-|1,1,1,1,0,0,0,0>
+### Objective
 
-Number of output states:
-183
+Implement a Controlled-NOT gate using photonic hardware primitives.
 
-Top Output States:
-|2,1,1,0,0,0,0,0>: 0.0817
-|3,0,1,0,0,0,0,0>: 0.0466
-|1,0,2,0,1,0,0,0>: 0.0412
-|0,2,1,0,1,0,0,0>: 0.0381
-|0,1,1,1,1,0,0,0>: 0.0374
-|1,1,0,0,2,0,0,0>: 0.0362
-|1,0,1,0,2,0,0,0>: 0.0362
-|2,0,1,0,1,0,0,0>: 0.0309
-|2,2,0,0,0,0,0,0>: 0.0293
-|1,2,0,0,1,0,0,0>: 0.0262
-|0,2,1,1,0,0,0,0>: 0.0256
-|1,0,1,0,1,1,0,0>: 0.0236
-|1,0,1,0,1,0,1,0>: 0.0236
-|1,1,2,0,0,0,0,0>: 0.0234
-|0,3,1,0,0,0,0,0>: 0.0233
-```
+The implementation utilizes:
+
+- Dual-rail encoding
+- Beam splitters
+- Heralded measurements
+- Postselection
+
+### Truth Table Verification
+
+The simulated photonic processor produced the expected CNOT behavior:
+
+| Input | Output |
+| ----- | ------ |
+| 00    | 00     |
+| 01    | 01     |
+| 10    | 11     |
+| 11    | 10     |
 
 ### Figures
 
-![Figure 7. Displayed Figure 01](quantam-circuit-simulation-figures/perceval_large_interferometer/displayed_figure_01.png)
+![Perceval HOM Beam Splitter Circuit Used Before the CNOT Processor](quantam-circuit-simulation-figures/perceval_cnot_gate/displayed_figure_01.png)
 
-*Figure 7. Displayed Figure 01*
+*Figure 5. Perceval HOM Beam Splitter Circuit Used Before the CNOT Processor*
 
-![Figure 8. Displayed Figure 02](quantam-circuit-simulation-figures/perceval_large_interferometer/displayed_figure_02.png)
+![Perceval Postprocessed Photonic CNOT Processor](quantam-circuit-simulation-figures/perceval_cnot_gate/displayed_figure_03.png)
 
-*Figure 8. Displayed Figure 02*
+*Figure 6. Perceval Postprocessed Photonic CNOT Processor*
 
-![Figure 9. Displayed Figure 03](quantam-circuit-simulation-figures/perceval_large_interferometer/displayed_figure_03.png)
+### Importance
 
-*Figure 9. Displayed Figure 03*
+The CNOT gate is a universal two-qubit gate and serves as a fundamental building block for quantum algorithms and communication protocols.
 
-![Figure 10. Large Interferometer Circuit](quantam-circuit-simulation-figures/perceval_large_interferometer/large_interferometer_circuit.png)
+---
 
-*Figure 10. Large Interferometer Circuit*
+## Experiment 5 - Boson Sampling
 
-![Figure 11. Large Interferometer Distribution](quantam-circuit-simulation-figures/perceval_large_interferometer/large_interferometer_distribution.png)
+### Objective
 
-*Figure 11. Large Interferometer Distribution*
+Study large-scale multi-photon interference in optical networks.
 
-## Perceval Mini Boson Sampling.py
+Boson Sampling is one of the most significant photonic quantum computing models because the resulting output distributions rapidly become difficult to simulate classically.
 
-### Terminal Output
+### Concepts Demonstrated
 
-```text
-Mini Boson-Sampling Circuit:
-<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x00000199F26C6E50>
+- Multi-photon interference
+- Large optical networks
+- Quantum computational complexity
 
-Input State:
-|1,1,1,0,0,0>
+### Result
 
-Top Output States:
-|1,1,0,1,0,0>: 0.1177
-|1,2,0,0,0,0>: 0.0947
-|2,1,0,0,0,0>: 0.0947
-|1,1,0,0,1,0>: 0.0683
-|1,1,0,0,0,1>: 0.0683
-|2,0,0,1,0,0>: 0.0645
-|0,2,0,1,0,0>: 0.0645
-|0,0,1,2,0,0>: 0.0617
-|0,0,0,3,0,0>: 0.0461
-|1,1,1,0,0,0>: 0.0385
-```
+The experiment generated a complex probability distribution across multiple photonic output states, demonstrating the combinatorial growth of interference effects in optical systems.
 
-### Figures
+![Perceval Mini Boson Sampling Optical Circuit](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/displayed_figure_01.png)
 
-![Figure 12. Displayed Figure 01](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/displayed_figure_01.png)
+*Figure 7. Perceval Mini Boson Sampling Optical Circuit*
 
-*Figure 12. Displayed Figure 01*
+![Perceval Mini Boson Sampling Output Distribution](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/displayed_figure_03.png)
 
-![Figure 13. Displayed Figure 02](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/displayed_figure_02.png)
+*Figure 8. Perceval Mini Boson Sampling Output Distribution*
 
-*Figure 13. Displayed Figure 02*
+![Perceval Mini Boson Sampling Saved Distribution](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/mini_boson_sampling_distribution.png)
 
-![Figure 14. Displayed Figure 03](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/displayed_figure_03.png)
+*Figure 9. Perceval Mini Boson Sampling Saved Distribution*
 
-*Figure 14. Displayed Figure 03*
+---
 
-![Figure 15. Mini Boson Sampling Circuit](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/mini_boson_sampling_circuit.png)
+## Experiment 6 - Large 8-Mode Photonic Interferometer
 
-*Figure 15. Mini Boson Sampling Circuit*
+### Objective
 
-![Figure 16. Mini Boson Sampling Distribution](quantam-circuit-simulation-figures/perceval_mini_boson_sampling/mini_boson_sampling_distribution.png)
+Scale the photonic system beyond simple quantum gates.
 
-*Figure 16. Mini Boson Sampling Distribution*
+The implemented interferometer contains:
 
-## Perceval Photonic Teleportation.py
+- 8 optical modes
+- Multiple beam splitter layers
+- Multiple phase shifter layers
+- 4-photon input states
 
-### Terminal Output
+### Results
+
+The simulation generated:
 
 ```text
-Alice's original qubit to teleport:
-0.707*|1,0>+0.707*|0,1>
-
-Shared Bell state between Alice and Bob:
-0.707*|1,0,1,0>+0.707*|0,1,0,1>
-
-Full teleportation output:
-{'results': {
-	|1,0,0,1,1,0>: 0.12499999999999999
-	|1,0,1,0,1,0>: 0.12499999999999999
-	|1,0,1,0,0,1>: 0.12500000000000003
-	|0,1,1,0,1,0>: 0.12499999999999999
-	|0,1,1,0,0,1>: 0.12500000000000003
-	|1,0,0,1,0,1>: 0.12500000000000003
-	|0,1,0,1,1,0>: 0.12499999999999999
-	|0,1,0,1,0,1>: 0.12500000000000003
-}, 'global_perf': 0.11111111111111115}
-
-Bob's final qubit distribution after teleportation:
-|1,0>: 0.5000
-|0,1>: 0.5000
-
-Global success probability:
-0.11111111111111115
-
-Photonic teleportation processor:
-<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x000001F6C66A0F90>
+Number of output states: 183
 ```
 
-### Figures
+The large number of output states highlights the rapidly increasing complexity of photonic quantum systems.
 
-![Figure 17. Displayed Figure 01](quantam-circuit-simulation-figures/perceval_photonic_teleportation/displayed_figure_01.png)
+![Perceval Large 8-Mode Photonic Interferometer Circuit](quantam-circuit-simulation-figures/perceval_large_interferometer/displayed_figure_01.png)
 
-*Figure 17. Displayed Figure 01*
+*Figure 10. Perceval Large 8-Mode Photonic Interferometer Circuit*
 
-![Figure 18. Displayed Figure 02](quantam-circuit-simulation-figures/perceval_photonic_teleportation/displayed_figure_02.png)
+![Perceval Large Interferometer Output Distribution](quantam-circuit-simulation-figures/perceval_large_interferometer/displayed_figure_03.png)
 
-*Figure 18. Displayed Figure 02*
+*Figure 11. Perceval Large Interferometer Output Distribution*
 
-![Figure 19. Displayed Figure 03](quantam-circuit-simulation-figures/perceval_photonic_teleportation/displayed_figure_03.png)
+![Perceval Large Interferometer Saved Distribution](quantam-circuit-simulation-figures/perceval_large_interferometer/large_interferometer_distribution.png)
 
-*Figure 19. Displayed Figure 03*
+*Figure 12. Perceval Large Interferometer Saved Distribution*
 
-![Figure 20. Photonic Teleportation Bob Distribution](quantam-circuit-simulation-figures/perceval_photonic_teleportation/photonic_teleportation_bob_distribution.png)
+### Significance
 
-*Figure 20. Photonic Teleportation Bob Distribution*
+This experiment demonstrates how scalable photonic processors evolve from simple beam-splitter networks into architectures related to modern photonic quantum computing platforms.
 
-![Figure 21. Photonic Teleportation Processor](quantam-circuit-simulation-figures/perceval_photonic_teleportation/photonic_teleportation_processor.png)
+---
 
-*Figure 21. Photonic Teleportation Processor*
+## Experiment 7 - Photonic Quantum Teleportation
 
-## Qiskit Bell State.py
+### Objective
 
-### Terminal Output
+Implement quantum teleportation using photonic hardware components.
+
+The experiment combines:
+
+- Dual-rail photonic qubits
+- Bell states
+- Photonic CNOT gates
+- Photon detectors
+- Feed-forward corrections
+
+### Teleportation Architecture
+
+The processor contains:
+
+- Bell-state generation
+- Entanglement distribution
+- Photonic CNOT operations
+- Measurement stages
+- Conditional correction circuits
+
+### Results
+
+The simulation successfully reconstructed Bob's final qubit from Alice's original state through a purely photonic implementation.
+
+The experiment demonstrates the physical realization of quantum teleportation using optical components rather than abstract logical gates.
+
+![Perceval Photonic Quantum Teleportation Processor](quantam-circuit-simulation-figures/perceval_photonic_teleportation/displayed_figure_01.png)
+
+*Figure 13. Perceval Photonic Quantum Teleportation Processor*
+
+![Perceval Photonic Teleportation Bob Qubit Distribution](quantam-circuit-simulation-figures/perceval_photonic_teleportation/displayed_figure_03.png)
+
+*Figure 14. Perceval Photonic Teleportation Bob Qubit Distribution*
+
+![Perceval Photonic Teleportation Saved Bob Distribution](quantam-circuit-simulation-figures/perceval_photonic_teleportation/photonic_teleportation_bob_distribution.png)
+
+*Figure 15. Perceval Photonic Teleportation Saved Bob Distribution*
+
+### Importance
+
+Photonic teleportation represents the culmination of the project, combining all previously introduced concepts:
 
 ```text
-Qiskit Bell-State Circuit:
-     ┌───┐     ┌─┐   
-q_0: ┤ H ├──■──┤M├───
-     └───┘┌─┴─┐└╥┘┌─┐
-q_1: ─────┤ X ├─╫─┤M├
-          └───┘ ║ └╥┘
-c: 2/═══════════╩══╩═
-                0  1 
-
-Measurement Results:
-{'11': 532, '00': 492}
+Entanglement
+    ->
+Quantum Gates
+    ->
+Photonic Logic
+    ->
+Quantum Communication
+    ->
+Photonic Teleportation
 ```
 
-### Figures
+---
 
-![Figure 22. Displayed Figure 01](quantam-circuit-simulation-figures/qiskit_bell_state/displayed_figure_01.png)
+## Gate-Based vs Photonic Quantum Computing
 
-*Figure 22. Displayed Figure 01*
+| Feature             | Qiskit          | Perceval                    |
+| ------------------- | --------------- | --------------------------- |
+| Information Carrier | Abstract Qubits | Photons                     |
+| Single-Qubit Gates  | Native          | Beam splitters              |
+| Two-Qubit Gates     | Native          | Heralded optical gates      |
+| Teleportation       | Circuit-based   | Physical optical components |
+| Focus               | Algorithms      | Hardware realization        |
 
-![Figure 23. Qiskit Bell State Results](quantam-circuit-simulation-figures/qiskit_bell_state/qiskit_bell_state_results.png)
+---
 
-*Figure 23. Qiskit Bell State Results*
+## Future Directions
 
-## Qiskit Quantum Teleportation.py
+This work establishes the building blocks required for more advanced photonic quantum computing architectures:
 
-### Terminal Output
+- GHZ state generation
+- Quantum key distribution (QKD)
+- Bell-state analysis
+- Gate teleportation
+- KLM optical quantum computing
+- Fault-tolerant photonic architectures
 
-```text
-Quantum Teleportation Circuit:
-     ┌───┐ ░            ░      ┌───┐ ░ ┌─┐    ░            
-q_0: ┤ H ├─░────────────░───■──┤ H ├─░─┤M├────░───────■────
-     └───┘ ░ ┌───┐      ░ ┌─┴─┐└───┘ ░ └╥┘┌─┐ ░       │    
-q_1: ──────░─┤ H ├──■───░─┤ X ├──────░──╫─┤M├─░───■───┼────
-           ░ └───┘┌─┴─┐ ░ └───┘      ░  ║ └╥┘ ░ ┌─┴─┐ │ ┌─┐
-q_2: ──────░──────┤ X ├─░────────────░──╫──╫──░─┤ X ├─■─┤M├
-           ░      └───┘ ░            ░  ║  ║  ░ └───┘   └╥┘
-c: 3/═══════════════════════════════════╩══╩═════════════╩═
-                                        0  1             2 
+---
 
-Measurement Results:
-{'100': 128, '011': 136, '111': 141, '110': 144, '101': 129, '001': 114, '000': 118, '010': 114}
-```
+## Conclusion
 
-### Figures
+This project demonstrates how quantum information can be created, manipulated, transmitted, and physically realized through both gate-based and photonic quantum computing paradigms.
 
-![Figure 24. Displayed Figure 01](quantam-circuit-simulation-figures/qiskit_quantum_teleportation/displayed_figure_01.png)
+Starting from Bell-state generation and quantum teleportation in Qiskit, the work progressively transitions into photonic implementations using Perceval, including HOM interference, photonic CNOT gates, large interferometric networks, and photonic teleportation.
 
-*Figure 24. Displayed Figure 01*
+Together, these experiments illustrate the path from fundamental quantum information protocols to the optical architectures that underpin modern photonic quantum computing research.
 
-![Figure 25. Quantum Teleportation Results](quantam-circuit-simulation-figures/qiskit_quantum_teleportation/quantum_teleportation_results.png)
+---
 
-*Figure 25. Quantum Teleportation Results*
+## Technologies Used
+
+- Python
+- Qiskit
+- Perceval
+- NumPy
+- Matplotlib
+
+---
+
+## References
+
+1. IBM Qiskit Documentation
+2. Perceval Documentation (Quandela)
+3. Bennett et al., Quantum Teleportation (1993)
+4. Knill-Laflamme-Milburn (KLM) Optical Quantum Computing
+5. Quantum Computing: An Applied Approach
