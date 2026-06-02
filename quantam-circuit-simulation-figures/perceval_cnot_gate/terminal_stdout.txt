@@ -1,0 +1,2 @@
+<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x00000254D833FE90>
+<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x00000254D837F650>

@@ -1,0 +1,9 @@
+Perceval Photonic Circuit:
+<perceval.components.linear_circuit.Circuit object at 0x0000028AFFF60F50>
+
+Input State:
+|1,1>
+
+Output Probability Distribution:
+|2,0>: 0.5000
+|0,2>: 0.5000

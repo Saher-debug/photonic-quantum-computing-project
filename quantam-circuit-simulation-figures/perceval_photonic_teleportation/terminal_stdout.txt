@@ -1,0 +1,28 @@
+
+Alice's original qubit to teleport:
+0.707*|1,0>+0.707*|0,1>
+
+Shared Bell state between Alice and Bob:
+0.707*|1,0,1,0>+0.707*|0,1,0,1>
+
+Full teleportation output:
+{'results': {
+	|1,0,0,1,1,0>: 0.12499999999999999
+	|1,0,1,0,1,0>: 0.12499999999999999
+	|1,0,1,0,0,1>: 0.12500000000000003
+	|0,1,1,0,1,0>: 0.12499999999999999
+	|0,1,1,0,0,1>: 0.12500000000000003
+	|1,0,0,1,0,1>: 0.12500000000000003
+	|0,1,0,1,1,0>: 0.12499999999999999
+	|0,1,0,1,0,1>: 0.12500000000000003
+}, 'global_perf': 0.11111111111111115}
+
+Bob's final qubit distribution after teleportation:
+|1,0>: 0.5000
+|0,1>: 0.5000
+
+Global success probability:
+0.11111111111111115
+
+Photonic teleportation processor:
+<perceval.rendering.canvas.mplot_canvas.MplotCanvas object at 0x000001F6C66A0F90>

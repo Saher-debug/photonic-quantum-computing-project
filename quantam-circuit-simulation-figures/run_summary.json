@@ -1,0 +1,89 @@
+[
+  {
+    "script": "perceval_cnot_gate.py",
+    "returncode": 0,
+    "folder": "C:\\Users\\Saher\\Documents\\Codex\\2026-06-02\\can-i-give-you-a-project\\outputs\\quantam-circuit-simulation-figures\\perceval_cnot_gate",
+    "figures": [
+      "cnot_photonic_processor.png",
+      "displayed_figure_01.png",
+      "displayed_figure_02.png",
+      "displayed_figure_03.png",
+      "displayed_figure_04.png",
+      "hom_optical_circuit.png"
+    ],
+    "stdout_chars": 164,
+    "stderr_chars": 0
+  },
+  {
+    "script": "perceval_hom_effect.py",
+    "returncode": 0,
+    "folder": "C:\\Users\\Saher\\Documents\\Codex\\2026-06-02\\can-i-give-you-a-project\\outputs\\quantam-circuit-simulation-figures\\perceval_hom_effect",
+    "figures": [],
+    "stdout_chars": 183,
+    "stderr_chars": 0
+  },
+  {
+    "script": "perceval_large_interferometer.py",
+    "returncode": 0,
+    "folder": "C:\\Users\\Saher\\Documents\\Codex\\2026-06-02\\can-i-give-you-a-project\\outputs\\quantam-circuit-simulation-figures\\perceval_large_interferometer",
+    "figures": [
+      "displayed_figure_01.png",
+      "displayed_figure_02.png",
+      "displayed_figure_03.png",
+      "large_interferometer_circuit.png",
+      "large_interferometer_distribution.png"
+    ],
+    "stdout_chars": 592,
+    "stderr_chars": 0
+  },
+  {
+    "script": "perceval_mini_boson_sampling.py",
+    "returncode": 0,
+    "folder": "C:\\Users\\Saher\\Documents\\Codex\\2026-06-02\\can-i-give-you-a-project\\outputs\\quantam-circuit-simulation-figures\\perceval_mini_boson_sampling",
+    "figures": [
+      "displayed_figure_01.png",
+      "displayed_figure_02.png",
+      "displayed_figure_03.png",
+      "mini_boson_sampling_circuit.png",
+      "mini_boson_sampling_distribution.png"
+    ],
+    "stdout_chars": 379,
+    "stderr_chars": 0
+  },
+  {
+    "script": "perceval_photonic_teleportation.py",
+    "returncode": 0,
+    "folder": "C:\\Users\\Saher\\Documents\\Codex\\2026-06-02\\can-i-give-you-a-project\\outputs\\quantam-circuit-simulation-figures\\perceval_photonic_teleportation",
+    "figures": [
+      "displayed_figure_01.png",
+      "displayed_figure_02.png",
+      "displayed_figure_03.png",
+      "photonic_teleportation_bob_distribution.png",
+      "photonic_teleportation_processor.png"
+    ],
+    "stdout_chars": 751,
+    "stderr_chars": 0
+  },
+  {
+    "script": "qiskit_bell_state.py",
+    "returncode": 0,
+    "folder": "C:\\Users\\Saher\\Documents\\Codex\\2026-06-02\\can-i-give-you-a-project\\outputs\\quantam-circuit-simulation-figures\\qiskit_bell_state",
+    "figures": [
+      "displayed_figure_01.png",
+      "qiskit_bell_state_results.png"
+    ],
+    "stdout_chars": 226,
+    "stderr_chars": 0
+  },
+  {
+    "script": "qiskit_quantum_teleportation.py",
+    "returncode": 0,
+    "folder": "C:\\Users\\Saher\\Documents\\Codex\\2026-06-02\\can-i-give-you-a-project\\outputs\\quantam-circuit-simulation-figures\\qiskit_quantum_teleportation",
+    "figures": [
+      "displayed_figure_01.png",
+      "quantum_teleportation_results.png"
+    ],
+    "stdout_chars": 690,
+    "stderr_chars": 0
+  }
+]
